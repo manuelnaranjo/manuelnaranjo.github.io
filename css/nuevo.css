@@ -11,7 +11,7 @@ body, html {
 /** STEP STYLES **/
 section {
   width: 900px;
-  height: 400px;
+  height: 700px;
   font-size: 20pt;
   min-height: 500px;
 
@@ -39,6 +39,9 @@ section {
   transition:         1s;
 
   pointer-events: auto;
+}
+
+.debug section {
   border: 2px solid red;
 }
 
