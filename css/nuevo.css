@@ -140,23 +140,16 @@ h2 {
   font-size: 1.4em;
 }
 
-.fixed-height, center-image {
+center-image {
   width: 900px;
   height: 700px;
-}
-
-.fixed-height img {
-  height:auto;
-  width:auto;
-  max-width: 900px;
-  max-height: 700px;
 }
 
 .center-image img {
   height:auto;
   width:auto;
-  max-width: 900px;
-  max-height: 700px;
+  max-width: 800px;
+  max-height: 600px;
 
   margin: 0;
   position: absolute;
@@ -166,12 +159,23 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+img.medium {
+  height:auto;
+  width:auto;
+  max-width: 400px;
+  max-height: 600px;
+}
+
 .gigante {
   font-size: 8em;
 }
 
 .gigante-2 {
   font-size: 5em;
+}
+
+.gigante-3 {
+  font-size: 3.5em;
 }
 
 .full-size {
@@ -221,7 +225,7 @@ h1, .league, .league-gothic, .pie {
   font-style: normal;
 }
 
-.pie {
+.pie, section p{
   font-size: 3.5em;
 }
 

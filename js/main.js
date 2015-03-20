@@ -1,24 +1,39 @@
 $(function(){
     $('article').jmpress({
         stepSelector: 'section',
-        hash: {
-//            use: false
-        },
+        //hash: {
+            // use: false
+        //},
         viewPort: {
             height: 500,
             width: 1000,
             maxScale: 1
         },
-        mouse: {
-            clickSelects: false
-        },
-        keyboard: {
-            use: true,
-        },
+        //mouse: {
+        //    clickSelects: true
+        //},
+        //keyboard: {
+            // use: true,
+        //},
         animation: {
             transitionDuration: '1s'
         }
     });
+
     window.API = $('article').data('jmpressmethods');
     $(document).trigger('jmsReady');
+
+    $(window).mousedown(function(event){
+        if (event.which === 3) {
+            var nevent = $.Event('keydown');
+            nevent.which = nevent.keyCode = 37;
+            $('body').trigger(nevent);
+            return false;
+        }
+    });
+    $(window).click(function(event){
+        var nevent = $.Event('keydown');
+        nevent.which = nevent.keyCode = 39;
+        $('body').trigger(nevent);
+    })
 });

@@ -1,24 +1,30 @@
 (function(){
+    var dX = 1100;
+    var dY = 600;
+
     $.jmpress("template", "auto", {
-        children: function(idx) {
+        children: function(idx, child, children) {
+            var preX = children.length > 1 ? -dX : 0;
+
             return {
-                y: 600,
-                x: -1100 + idx * 1100,
+                y: dY,
+                x: preX + idx * dX,
                 scale: 0.5,
                 template: 'auto'
-                //rotate: 0,
             };
         }
     });
-    $.jmpress('template', 'main', {
+
+    $.jmpress("template", "vertical",{
         children: function(idx) {
             return {
-                x: 1000 * idx,
-                //rotate: 0,
-                template: 'main'
-            }
+                y: dY * (idx+1),
+                x: 0,
+                scale: 0.5,
+            };
         }
-    })
+    });
+
     $.jmpress("template", "carrousel",{
         children: function(idx, child, childs) {
             var k = 0;
