@@ -159,11 +159,25 @@ center-image {
   transform: translate(-50%, -50%);
 }
 
-img.medium {
+.medium {
+  width: 400px;
+  height: 600px;
+}
+
+.medium img {
   height:auto;
   width:auto;
   max-width: 400px;
   max-height: 600px;
+}
+
+img.center {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -40%);
 }
 
 .gigante {
@@ -251,4 +265,13 @@ section#caratula {
 #caratula h1 {
   padding-top: 15%;
   padding-bottom: 5%;
+}
+
+span.hito {
+  color: green;
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  font-size: 8em;
+  transform: translate(0%, -50%);
 }
