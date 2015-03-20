@@ -1,4 +1,90 @@
 /** GENERAL **/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body {
+    font-family: 'PT Sans', sans-serif;
+
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+
+    -webkit-font-smoothing: antialiased;
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    // padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
 body, html {
   font-family: Verdana, sans-serif;
   background-color: #ddd;
@@ -11,12 +97,12 @@ body, html {
 /** STEP STYLES **/
 section {
   width: 900px;
-  height: 700px;
   font-size: 20pt;
-  min-height: 500px;
+  // height: 700px;
+  min-height: 50px;
 
   display: block;
-  padding: 40px 60px;
+  // padding: 40px 60px;
 
   text-align: center;
 
@@ -47,29 +133,118 @@ section {
 
 h1 {
   color: red;
-}
-.nextday {
-}
-.prevday {
-}
-.prevday, .nextday {
-  border: 1px rgba(202, 102, 202, 0.5);
-  border-radius: 5px;
-  margin-top: 30px;
-  padding: 5px;
-  background: rgba(202, 202, 202, 0.5);
-  box-shadow: 2px 2px rgba(0,0,0,0.5);
-  color: black;
-  text-decoration: none;
-  opacity: 0;
-
-  -webkit-transition: 1s;
-  -moz-transition:    1s;
-  -ms-transition:     1s;
-  -o-transition:      1s;
-  transition:         1s;
+  font-size: 1.5em;
 }
 
-.active .prevday, .active .nextday {
-  opacity: 1;
+h2 {
+  font-size: 1.4em;
+}
+
+.fixed-height, center-image {
+  width: 900px;
+  height: 700px;
+}
+
+.fixed-height img {
+  height:auto;
+  width:auto;
+  max-width: 900px;
+  max-height: 700px;
+}
+
+.center-image img {
+  height:auto;
+  width:auto;
+  max-width: 900px;
+  max-height: 700px;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.gigante {
+  font-size: 8em;
+}
+
+.gigante-2 {
+  font-size: 5em;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  height: 100%
+}
+
+img.logo {
+  position: absolute;
+  height: 150px;
+  top: 1%;
+}
+
+div.logo {
+  height: 150px;
+  width: 100%;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 40px;
+}
+
+
+.to-left {
+  left: 0px;
+}
+
+.to-right {
+  right: 0px;
+}
+
+h1, .league, .league-gothic, .pie {
+  font-family: 'League Gothic';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pie {
+  font-size: 3.5em;
+}
+
+#caratula h1.gigante {
+  font-size: 5.5em;
+}
+
+section#caratula {
+  height: 700px;
+}
+
+#caratula .full-size {
+  display: table;
+  width: 900px;
+}
+
+#caratula .vertical {
+  display: table-cell;
+  vertical-align: middle;
+  width: 900px;
+}
+
+#caratula h1 {
+  padding-top: 15%;
+  padding-bottom: 5%;
 }
