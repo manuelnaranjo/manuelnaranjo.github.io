@@ -27,7 +27,7 @@
 
             }
             return {
-                r: (idx % 2 === 0 ? 200 : 400),
+                r: (idx % 2 === 0 ? 350 : 400),
                 phi: idx * k,
                 rotateY: idx * k,
                 scale: {
