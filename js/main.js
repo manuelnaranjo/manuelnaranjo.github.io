@@ -7,7 +7,9 @@ $(function(){
         viewPort: {
             height: 500,
             width: 1000,
-            maxScale: 1
+//            maxScale: 1,
+//            minScale: 0.0010,
+//            zoomable: 10
         },
         //mouse: {
         //    clickSelects: true
@@ -17,7 +19,8 @@ $(function(){
         //},
         animation: {
             transitionDuration: '1s'
-        }
+        },
+        //zoomable: 10
     });
 
     window.API = $('article').data('jmpressmethods');

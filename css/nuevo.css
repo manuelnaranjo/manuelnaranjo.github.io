@@ -50,7 +50,7 @@ table {
 body {
     font-family: 'PT Sans', sans-serif;
 
-    min-height: 740px;
+    min-height: 600px;
 
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
@@ -145,6 +145,7 @@ center-image {
   height: 700px;
 }
 
+.small-random .active img,
 .center-image img {
   height:auto;
   width:auto;
@@ -157,6 +158,12 @@ center-image {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+.small-random .active img {
+  max-width: 2000px !important;
+  width: 980px !important;
+  max-height: 900px !important;
 }
 
 .medium {
@@ -274,4 +281,15 @@ span.hito {
   right: 2%;
   font-size: 8em;
   transform: translate(0%, -50%);
+}
+
+.small-random img {
+  max-width: 500px;
+  height: auto;
+}
+
+.small-random .active img {
+  max-width: 900px;
+  max-height: 700px;
+  z-index:   1000;
 }

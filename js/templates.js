@@ -47,4 +47,33 @@
             };
         }
     });
+
+    var rowLength = 4;
+    var margin = 50;
+    var dx = (dX - margin / 2) / rowLength;
+
+    $.jmpress('template', 'random-12-disp',{
+        scale: 0.2,
+        secondary: {'': 'self', scale: 2, x: dX*1.3, y: dY*1.3}
+    });
+
+    $.jmpress("template", "random-12",{
+        children: [
+            {x: -300, y:-200, rotate: 33,  template: 'random-12-disp'},
+            {x: -100, y:-180, rotate:-41,  template: 'random-12-disp'},
+            {x:  100, y:-220, rotate:-20,  template: 'random-12-disp'},
+            {x:  300, y:-210, rotate: 39,  template: 'random-12-disp'},
+
+            {x: -300, y: 000, rotate:-10, template: 'random-12-disp'},
+            {x: -100, y: 000, rotate:  0, template: 'random-12-disp'},
+            {x:  100, y: 000, rotate: 25, template: 'random-12-disp'},
+            {x:  300, y: 000, rotate:-20, template: 'random-12-disp'},
+
+            {x: -300, y: 200, rotate: 13, template: 'random-12-disp'},
+            {x: -100, y: 200, rotate:-30, template: 'random-12-disp'},
+            {x:  100, y: 200, rotate:-10, template: 'random-12-disp'},
+            {x:  300, y: 200, rotate: 20, template: 'random-12-disp'},
+        ]
+    });
+
 })()

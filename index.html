@@ -6,7 +6,7 @@
 
     <meta name="description" content="Presentación final de mi proyecto de Ing Electrónica hecho con jmpress.js">
     <meta name="author" content="Naranjo Manuel Francisco naranjo dot manuel at gmail dot com" />
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <!--link href="/css/bootstrap.css" rel="stylesheet"/ -->
@@ -18,6 +18,7 @@
 
     <script src="/js/jquery-2.1.3.js" type="text/javascript"></script>
     <script src="/js/jmpress.js" type="text/javascript"></script>
+    <script src="/js/jmpress.secondary.js" type="text/javascript"></script>
     <script src="/js/templates.js" type="text/javascript"></script>
     <!-- script src="/js/colores.js" type"text/javascript"></script -->
     <script src="/js/caratula.js" type="text/javascript"></script>
@@ -86,16 +87,16 @@
           </div>
 
           <section class="center-image">
-            <img height="100%" src="/images/objetivos/03/01-min.jpg">
+            <img src="/images/objetivos/03/01-min.jpg">
           </section>
           <section class="center-image">
-            <img height="100%" src="/images/objetivos/03/02-min.jpg">
+            <img src="/images/objetivos/03/02-min.jpg">
           </section>
           <section class="center-image">
-            <img height="100%" src="/images/objetivos/03/03-min.jpg">
+            <img src="/images/objetivos/03/03-min.jpg">
           </section>
           <section class="center-image">
-            <img height="100%" src="/images/objetivos/03/04-min.jpg">
+            <img src="/images/objetivos/03/04-min.jpg">
           </section>
         </section>
       </section>
@@ -127,7 +128,6 @@
             <li data-jmpress="warp-right after 2000ms step">programa de pieza</li>
             <li data-jmpress="warp-left after 3000ms step">=</li>
             <li data-jmpress="fade after 4000ms step">repetitividad, producción</li>
-
           </ul>
         </section>
       </section>
@@ -145,11 +145,38 @@
                   >modelado inicial comportamientos</span>
           </div>
         </section>
-        <section>
+        <section data-template="vertical">
             <h1 class="gigante">Clasificar componentes</h1>
             <span class="pie"
                   data-jmpress="zoom after 1000ms step"
                   >análisis de documentación</span>
+            <section class="center-image">
+              <img style="max-height: 700px;"
+                   src="/images/componentes/83558376-min.png"></img>
+            </section>
+            <section>
+              <h1 class="gigante-2">Fagor 8035</h1>
+              <ul class="pie">
+                <li>Control analógico de 3 ejes</li>
+                <li>PLC integrado</li>
+                <li>Linux 2.4</li>
+                <li>Salidas/Entradas 24VCC</li>
+                <li>Programación códigos G</li>
+                <li>Ciclos enlatados</li>
+              </ul>
+            </section>
+            <section class="center-image">
+              <h1 class="gigante-2">Drivers y servos Estun</h1>
+              <div class="medium"
+                   style="width: 600px; height: 400px;">
+                <img class="center"
+                     style="max-width: 600px; transform: translate(-50%, -56%)"
+                     src="/images/componentes/estun-2.jpg"></img>
+              </div>
+              <p class="pie">
+                trifásico, 2000/3000 RPM, 17b+1, velocidad proporcional o manual
+              </p>
+            </section>
         </section>
         <section>
           <h1 class="gigante">División en subsistemas</h1>
@@ -172,20 +199,56 @@
                 Arranque inicial de controladora
               </h1>
               <div class="medium">
-                <img
-                   class="center"
-                   data-jmpress="fade after 500ms step"
-                   src="/images/electrico/01.jpg"></img>
-                <img
-                   class="center"
-                   data-jmpress="fade after 2000ms prev"
-                   src="/images/electrico/02.jpg"></img>
+                <img class="center"
+                     data-jmpress="fade after 500ms step"
+                     src="/images/electrico/01.jpg"></img>
+                <img class="center"
+                     data-jmpress="fade after 2000ms prev"
+                     src="/images/electrico/02.jpg"></img>
               </div>
               <span class="hito glyphicon glyphicon-ok"
                     data-jmpress="fade after 1000ms prev"></span>
             </section>
             <section>
               <h1 class="gigante-3">Esquemas de circuito</h1>
+            </section>
+            <section class="small-random" data-template="random-12">
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/01.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/02.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/03.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/04.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/05.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/06.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/07.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/08.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/09.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/10.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/11.png"></img>
+              </section>
+              <section data-exclude="true">
+                <img src="/images/electrico/esquema/12.png"></img>
+              </section>
             </section>
           </section>
 
