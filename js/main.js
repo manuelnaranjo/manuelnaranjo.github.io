@@ -5,11 +5,11 @@ $(function(){
             // use: false
         //},
         viewPort: {
-            height: 500,
+            height: 750,
             width: 1000,
-//            maxScale: 1,
-//            minScale: 0.0010,
-//            zoomable: 10
+            maxScale: 10,
+            minScale: 1.,
+            zoomable: 10
         },
         //mouse: {
         //    clickSelects: true

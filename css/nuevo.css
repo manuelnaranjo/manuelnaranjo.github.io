@@ -293,3 +293,20 @@ span.hito {
   max-height: 700px;
   z-index:   1000;
 }
+
+video {
+  width: auto;
+  height: auto;
+}
+
+.rotate-90 {
+  -moz-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  transform:rotate(90deg);
+}
+
+!.active .hito {
+  display: none;
+}

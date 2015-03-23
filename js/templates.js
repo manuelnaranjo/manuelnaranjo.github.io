@@ -48,6 +48,30 @@
         }
     });
 
+    $.jmpress("template", "carrousel-2",{
+        children: function(idx, child, childs) {
+            var k = 0;
+            if (childs.length > 0) {
+                k = 360 / childs.length;
+
+            }
+            return {
+                r: (idx % 2 === 0 ? 750 : 800),
+                phi: idx * k,
+                rotateY: idx * k,
+                scale: {
+                    x: .7,//(idx % 2 === 0 ? .7 : .7),
+                    y: .1//(idx % 2 === 0 ? .1 : .1)
+                },
+                x: 0,
+                y: 0,
+                rotateX: 90,
+
+            };
+        }
+    });
+
+
     var rowLength = 4;
     var margin = 50;
     var dx = (dX - margin / 2) / rowLength;
