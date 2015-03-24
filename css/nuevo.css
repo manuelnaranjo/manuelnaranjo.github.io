@@ -16,7 +16,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 5vh;
     font: inherit;
     vertical-align: baseline;
 }
@@ -51,6 +51,7 @@ body {
     font-family: 'PT Sans', sans-serif;
 
     min-height: 600px;
+    min-width: 800px;
 
     background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
@@ -96,13 +97,7 @@ body, html {
 
 /** STEP STYLES **/
 section {
-  width: 900px;
-  font-size: 20pt;
-  // height: 700px;
-  min-height: 50px;
-
   display: block;
-  // padding: 40px 60px;
 
   text-align: center;
 
@@ -125,6 +120,28 @@ section {
   transition:         1s;
 
   pointer-events: auto;
+  font-size: 5vh;
+}
+
+@media (max-width: 640px) {
+  section {
+    width: 640px;
+    min-height: 50px;
+    max-height: 480px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+  section {
+    width: 800px;
+    min-height: 50px;
+    max-height: 600px;
+  }
+
+  body {
+    min-width: 640px;
+    min-height: 480px;
+  }
 }
 
 .debug section {
@@ -133,16 +150,15 @@ section {
 
 h1 {
   color: red;
-  font-size: 1.5em;
+  font-size: 10vh;
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 6vh;
 }
 
-center-image {
-  width: 900px;
-  height: 700px;
+h3 {
+  font-size: 5vh;
 }
 
 .small-random .active img,
@@ -160,10 +176,26 @@ center-image {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 640px) {
+  .small-random .active img,
+  .center-image img {
+    max-width: 620px;
+    max-height: 460px;
+  }
+}
+
+
 .small-random .active img {
-  max-width: 2000px !important;
-  width: 980px !important;
-  max-height: 900px !important;
+  max-width: 800px !important;
+  width: 800px !important;
+  max-height: 600px !important;
+
+  @media (max-width: 640px) {
+    max-width: 640px!important;
+    max-height: 480px!important;
+    width: 640px !important;
+  }
+
 }
 
 .medium {
@@ -187,16 +219,36 @@ img.center {
   transform: translate(-50%, -40%);
 }
 
+img.center-2 {
+  position: relative;
+  //top: 2%;
+  margin: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-85%, -50%);
+}
+
+.estun {
+  height: 380px !important;
+}
+
+.estun img {
+  height: 380px !important;
+}
+
 .gigante {
-  font-size: 8em;
+  //font-size: 7em;
+  font-size: 30vh;
 }
 
 .gigante-2 {
-  font-size: 5em;
+  //font-size: 5em;
+  font-size: 25vh;
 }
 
 .gigante-3 {
-  font-size: 3.5em;
+  //font-size: 3.5em;
+  font-size: 20vh;
 }
 
 .full-size {
@@ -217,21 +269,6 @@ img {
   height: 100%
 }
 
-img.logo {
-  position: absolute;
-  height: 150px;
-  top: 1%;
-}
-
-div.logo {
-  height: 150px;
-  width: 100%;
-  padding-bottom: 20px;
-  position: absolute;
-  top: 40px;
-}
-
-
 .to-left {
   left: 0px;
 }
@@ -247,26 +284,26 @@ h1, .league, .league-gothic, .pie {
 }
 
 .pie, section p{
-  font-size: 3.5em;
+  font-size: 12vh;
 }
 
 #caratula h1.gigante {
-  font-size: 5.5em;
+  font-size: 20vh;
 }
 
 section#caratula {
-  height: 700px;
+  height: 600px;
 }
 
 #caratula .full-size {
   display: table;
-  width: 900px;
+  width: 800px;
 }
 
 #caratula .vertical {
   display: table-cell;
   vertical-align: middle;
-  width: 900px;
+  width: 800px;
 }
 
 #caratula h1 {
@@ -274,12 +311,87 @@ section#caratula {
   padding-bottom: 5%;
 }
 
+img.logo {
+  position: absolute;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+div.logo {
+  height: 100px;
+  width: 100%;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 10px;
+}
+
+@media (max-width: 640px) {
+  #caratula h1.gigante {
+    font-size: 20vh;
+  }
+
+  section#caratula {
+    height: 480px;
+  }
+
+  #caratula .full-size {
+    display: table;
+    width: 640px;
+  }
+
+  #caratula .vertical {
+    display: table-cell;
+    vertical-align: middle;
+    width: 640px;
+  }
+
+  #caratula h1 {
+    padding-top: 85px;
+    padding-bottom: 5px;
+  }
+
+  /* h2 { */
+  /*   font-size: 1em; */
+  /* } */
+
+  /* h3 { */
+  /*   font-size: 0.8em; */
+  /* } */
+
+  img.logo {
+    position: absolute;
+    height: 80px;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  div.logo {
+    height: 80px;
+    width: 100%;
+    padding-bottom: 1%;
+    position: absolute;
+    top: 1%;
+  }
+
+  .medium {
+    width: 640px;
+    height: 400px;
+  }
+
+  .medium img {
+    height:auto;
+    max-width: 640px;
+    height: 390px;
+  }
+}
+
 span.hito {
   color: green;
   position: absolute;
   top: 50%;
   right: 2%;
-  font-size: 8em;
+  font-size: 20vh;
   transform: translate(0%, -50%);
 }
 
@@ -289,8 +401,8 @@ span.hito {
 }
 
 .small-random .active img {
-  max-width: 900px;
-  max-height: 700px;
+  max-width: 800px;
+  max-height: 600px;
   z-index:   1000;
 }
 

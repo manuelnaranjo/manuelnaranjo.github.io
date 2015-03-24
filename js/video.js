@@ -1,4 +1,5 @@
 $(function(){
+
     var divs = $('section video').parent()
     divs.on('enterStep', function(event){
         var video= $(this).find('video');

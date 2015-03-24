@@ -5,7 +5,8 @@ $(function(){
 
         var template = ' \
 <section style="width: 950px; max-height: 700px"> \
-  <video controls muted loop style="width: 950px; max-height: 700px"> \
+  <video controls muted loop \
+         style="width: 950px; max-height: 700px"> \
     <source type="video/mp4"> \
   </video> \
   <span class="hito glyphicon glyphicon-ok" data-jmpress="fade"></span> \
@@ -16,4 +17,14 @@ $(function(){
         template.find('video').attr('class', klass);
         $(this).replaceWith(template);
     });
+
+
+    // $('img').load(function(){
+    //     $(document).find('source[src2]')
+    //         .each(function(){
+    //             var url = $(this).attr('src2');
+    //             $(this).attr('src', url);
+    //             $(this).removeAttr('src2');
+    //         });
+    // });
 });
