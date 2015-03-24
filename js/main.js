@@ -48,6 +48,10 @@ $(function(){
 
     $('.small-random section')
         .click(function(){
+            if ($(this).hasClass('active')){
+                return;
+            }
+
             var id = $(this).attr('id');
             console.log($(this));
             //API.goTo('#' + id);
