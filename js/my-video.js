@@ -4,9 +4,8 @@ $(function(){
         var klass = $(this).attr('class');
 
         var template = ' \
-<section style="width: 950px; max-height: 700px"> \
-  <video controls muted loop \
-         style="width: 950px; max-height: 700px"> \
+<section class="video-container"> \
+  <video controls muted loop > \
     <source type="video/mp4"> \
   </video> \
   <span class="hito glyphicon glyphicon-ok" data-jmpress="fade"></span> \
