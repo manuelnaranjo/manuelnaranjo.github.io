@@ -144,7 +144,7 @@ section {
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 801px){
   section {
     width: 1000px;
     min-height: 50px;
@@ -197,6 +197,21 @@ h3 {
   }
 }
 
+@media (min-width: 641px) and (max-width: 800px) {
+  .small-random .active img,
+  .center-image img {
+    max-width: 780px;
+    max-height: 580px;
+  }
+}
+
+@media (min-width: 801 px) {
+  .small-random .active img,
+  .center-image img {
+    max-width: 1000px;
+    max-height: 760px;
+  }
+}
 
 .small-random .active img {
   max-width: 800px;

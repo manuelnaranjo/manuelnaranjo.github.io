@@ -9,7 +9,217 @@
     <meta name="viewport" content="width=device-width, height=device-height, maximum-scale=1.0, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta http-equiv="expires" content="0">
+    <link href="./css/notas.css" rel="stylesheet" />
   </head>
   <body>
-  </body>
+    <p id="caratula">
+      Gracias a todos por venir, mi nombre es Manuel Naranjo, soy estudiante
+      de ing electrónica de la facultad de la facu de ing y ciencias exactas de
+      Rosario, y la está noche voy a contarles un poco de que se trata mi
+      proyecto final el cuál desarrollé entre Mayo y Octubre de 2013.<br>
+      El mismo consistió en realizar una reingenería de un torno CNC, lo cuál
+      se conoce en la industria como refitting, o como llegue a denomiarlo....
+      Enchulame el torno.
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </p>
+    <p id="objetivos">
+      Qué quiero decir con reingenería o refitting, o mejor dicho cuáles fueron
+      los objetivos del proceso que lleve adelante (slide)<br>
+    </p>
+    <p id="step-3">
+      A rasgos generales el proceso consiste en reemplazar y/o actualizar
+      tecnológicamente algunos componentes de una máquina en funcionamiento,
+      y lograr que la misma vuelva a producción. En esté caso en particular el
+      proceso lo inició un tercero, y al momento de iniciar mis tareas el estado
+      de la máquina era (slide)<br>
+    <p id="step-4">
+      En estas imagenes pueden notar que la máquina no se encontraba funcional,
+      sino que por el contrario se encontraba desmantelada.
+      Acá podemos ver las bancadas del eje X y Z, el sistema porta-herramientas,
+      el cabezal con el husillo y el tablero eléctrico (slide)<br>
+    <p id="step-5">
+      Luego de aplicar el proceso de refitting, logré el resultado que se ve a
+      continuación, acá podemos ver la máquina de lejos, el porta herramientas
+      con una pieza siendo trabajada, el saca-virutas, el tablero eléctrico
+      (slide)
+    </p>
+    <p id="intro-torno">
+      Qué es un torno? Básicamente un torno es una máquina herramienta, que
+      funciona por desprendimiento de viruta, y la cual permite trabajar piezas
+      de revolución, dado que es una máquina de desprendimiento o de desbaste.
+      (slide)
+    <p id="step-15">
+      se parte de una pieza de mayores dimensiones (slide)
+    </p>
+    <p id="step-16">
+      llegandosé a una de menores (slide) con distintas especificaciones, como
+      diametros, largos, prugosidades, roscas, entre otras.
+    </p>
+    <p id="intro-cnc">
+      Qué es una máquina CNC? Bueno es una máquina herramienta (en particular un
+      torno en este caso en particular), al cuál se le acopla una computadora, a
+      la cual lleva un programa que especifica el movimiento de las herramientas
+      de corte asociados a la pieza a fabricar. (slide)<br>
+    </p>
+    <p id="step-18">
+      Cuáles son las ventajas de una máquina CNC, como se menciono tiene un programa
+      de pieza, lo cuál asociado al control automátizado del movimiento de ejes,
+      permite una alta repetividad en medianos y grandes volúmenes de producción.
+      (slide)<br>
+    </p>
+    <p id="step-19">
+      Cómo se distingue un torno cnc de otro. Por un lado están las caraceterísticas
+      constructivas: Largo máximo de desplazamiento de los ejes, peso máximo tolerado en el
+      husillo, largo y diámetro máximo tolerado por el husillo, velocidad de
+      avance rápido (teniendo en cuenta que la velocidad durante el desbaste
+      queda determinado por el material a trabajar, la herramienta y la capacidad
+      de disipar calor), cantidad de herramientas y tiempo de cambio de las mismas.
+      Por otro lado la controladora CNC, qué es la encargada de controlar el
+      movimiento, proveer la HMI y llevar cuenta del programa de pieza, es una
+      característica fundamental, capacidades de memorias, velocidades de
+      procesamiento, cantidad de ejes que puede controlar, PLC integrado y
+      ciclos enlatados, los cuales permiten con pocas instrucciones de definición
+      de pieza lograr movimientos complejos.
+    </p>
+
+    <p id="step-20">
+      Ahora que entendimos un poco de que se trata un torno CNC, y cuáles eran
+      mis objetivos, voy a contarles un poco cómo fue el proceso que se llevo a
+      cabo.<br>
+    </p>
+    <p id="step-21">
+      Se inicio tratando de identificar subsistemas, o bloques de funcionalidades
+      similares, los cuales pudiesen ser resueltos por separado, e integrados en
+      una solución final utilizando una solución del tipo bottom-up
+    </p>
+    <p id="step-22">
+      Para ello fue necesario clasificar e investigar los distintos componentes
+      tanto actuales como previos, compararlos con otras máquinas disponibles e
+      investigar su documentación, para tener un primer pantallazo.<br>
+      En particular podemos mencionar
+    </p>
+    <p id="step-23">
+      La controladora CNC, se trata de una Fagor 8035-m configurada en modo
+      torno, la cuál cuenta con capacidad para control analógico o digital por vía
+      CAN de 3 ejes, una pantalla LCD color, con una computadora básadada en un
+      PowerPC (RISC), corriendo un Linux 2.4 modificado, un PLC integrado
+      con control sobre salidas y entradas digitales de 25VCC. Permite la
+      programación por códigos ISO G, y cuenta con ciclos enlatados, los cuales
+      permiten por ejemplo con una sóla instrucción G realizar un cilindrado
+      siguiendo un perfil complejo.
+    </p>
+    <p id="step-24">
+      Los drivers y servos utilizados en los ejes son marca Estun, los mismos
+      tienen una velocidad máxima de 2000rpm, permitiendo picos de 3000rpm por
+      unos pocos minutos, encoder diferencial acoplado al eje de 17bits + sentido,
+      modo de control proporcional o manual, ganancia ajustable, divisior para
+      el encoder, detector de errores, control y alimentación independiente.
+    </p>
+    <p id="step-25">
+      Dada la complejidad del sistema fue fundamental dividir el sistema en
+      subsistemas más pequeños, sencillos e indivisibles, también se definieron
+      hitos esperables a resolver con tiempos estimados, ahora les voy a contar
+      de algunos de dichos subsistemas y como se resolvieron.
+    </p>
+    <p id="step-26">
+      Lo primero a resolver el sistema electrico, dada la cantidad de componentes
+      que intervienen, alimentacin DC y AC tanto monofásica como trifásica,
+      señales de control de DC y AC, drivers de ejes e inversor del husillo,
+      actuadores  y sensores, protecciones, etapas de baja y alta tensión, etc.
+      Hacen que el circuito eléctrico no sea trivial de resolver, se contaba con
+      el respaldo de la documentación provista por los distintos fabricantes, manual
+      original de la máquina y de otras máquinas para comparar.
+    </p>
+    <p id="step-27">
+      Dado que no se sabía si la controladora funcionaba se realizo un conexionado
+      temporal que sólo permitiese prender la misma. El resultado fue el siguiente
+      (step)<br>
+      Esté fue un hito menor, pero importante, ya que permitió investigar la
+      controladora funcionando, y suponer que el proyecto era posible de realizar.
+    </p>
+
+    <p id="step-28">
+      Se realizaron distintos esquemas eléctricos, siguiendo los lineamientos del
+      manual original de la máquina, los mismos se agruparon por grupo funcional,
+      se realizó un borrador inicial y se procedió a conectarlos iterativamente,
+      corrigiendolos sobre la marcha, pero teniendo los borradores como guía.(step)
+    </p>
+    <p id="step-29">
+      El resultado final fue esté, acá se pueden ver todos los esquemas realizados,
+      podemos por ejemplo agrandar uno (step)
+    </p>
+    <p id="step-32">
+      Esté es el diagrama de conexión del eje Z, el cuál es similar al eje X y al
+      cambiador de herramientas. En particular podemos ver la alimentación trifásica
+      de potencia (la cuál sólo está disponible en condiciones normales de
+      funcionamiento), la alimentación monofásica a la etapa de control, la salida
+      trifásica hacía el motor, el conexioado entre el encoder y el driver y las
+      entradas y salidas hacia el CNC.
+    </p>
+    <p id="step-42">
+      Si recuerdan les dije que un torno era una máquina que trabajaba con piezas
+      de revolución, para eso se mueve una herramienta de corte en un eje paralelo
+      al eje de rotación (el cuál se conoce como eje Z) y otro eje el cuál es
+      perpendicular al eje de rotación (se lo conoce como eje X). <br>
+      Hay un tercer eje que se ajusto que es el eje de movimiento del cambiador
+      de herramientas, el cuál vamos a denominar T por ahora.
+    </p>
+    <p id="step-43">
+      dado que la controladora es genérica, dichos ejes requieren pasar por un proceso de
+      ajuste, por ejemplo hay que decirle a la controladora que tipo de eje y en
+      qué puerto, cuál es la relación entre vueltas de los motores y avance del
+      eje, límites de movimiento, ganancias de los lazos de control, etc.<br>
+      Dicho proceso no es trivial y requeriró bastante trabajo, coordinando
+      programación del PLC con la configuración de parámetros utilizando los
+      distintos manuales como guías. En forma general podemos decir que los
+      hitos a realizar son: (leer y explicar títulos)
+    </p>
+    <p id="step-44">
+      Esté es el ajuste a lazo abierto, se desconecta la salida de control del
+      CNC y la carga sobre el eje, y se realiza una conexión que permite el modo manual en el driver.
+      Con está prueba se busca comprobar la comunicación entre el driver, el motor
+      y el encoder, por ejemplo alguno de los ejes tenía mal cableado el encoder
+      y el driver mostraba error. (step) <br>
+      Esté paso fue un hito vamos al siguiente.
+    </p>
+    <p id="step-45">
+      A continuación se conecta la señal de control del CNC al driver, y la realimentación
+      del driver al CNC. Lo que podría y de hecho sucede son varias cosas, por un lado
+      existe un offset entre la controladora y cada uno de sus ejes lo cuál es
+      necesario de ajustar, también puede suceder que el sentido de la señal de
+      realimentación coincida con el sentido del valor de set en la entrada del
+      lazo de control, lo cuál conlleva a una acumulación de error, y el efecto
+      de ambos lo comprobamos en la pantalla, viendo que la posición no se queda estable.
+      <br>(slide)Estó se ajusto y fue un nuevo hito, dando el siguiente resultado.
+    </p>
+    <p id="step-46">
+      Acá podemos ver la posición de los ejes a la izq y el error medido por el
+      CNC a la derecha, el error estático y dinámico es configurable y acotable.
+      Vemos que sólo durante el movimiento el error dinámico crece, y luego dado
+      que se controla velocidad y se realimenta posición el error estático tiende
+      a 0.<br>(step)Esté es nuevo hito, ya que significa que la controladora tiene
+      controlado a los ejes, y los mismos no van a embalarse al conectar la carga
+    </p>
+    <p id="step-47">
+    </p>
+</body>
 </html>

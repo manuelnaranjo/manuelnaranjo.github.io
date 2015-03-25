@@ -51,7 +51,7 @@
       </section>
 
       <!-- objetivos -->
-      <section data-template="auto">
+      <section data-template="auto" id="objetivos">
         <div>
           <h1 class="gigante">
             ¿Objetivos del proyecto?
@@ -102,9 +102,8 @@
         </section>
       </section>
 
-      <section data-template="carrousel">
+      <section data-template="carrousel" id="intro-torno">
         <h1 class="gigante">¿Qué es un torno?</h1>
-        <span class="pie">Máquina herramienta, desprendimiento de viruta</span>
         <section class="center-image">
           <img src="./images/extra/cnc/01.jpg">
         </section>
@@ -113,23 +112,26 @@
         </section>
       </section>
 
-      <section data-template="auto">
+      <section data-template="auto" id="intro-cnc">
         <h1 class="gigante">¿Qué es CNC?</h1>
         <span class="pie">
-          <span data-jmpress="warp-right after 1000ms step">Máquina herramienta</span>
-          <span data-jmpress="expand after 2000ms step"><br>+<br></span>
-          <span data-jmpress="warp-left after 1000ms step">Computadora</span>
+          <span data-jmpress="warp-right after step">Máquina herramienta</span>
+          <span data-jmpress="expand after step"><br>+<br></span>
+          <span data-jmpress="warp-left after step">Computadora</span>
         </span>
 
         <section>
-          <h1 class="gigante">Características</h1>
+          <h1 class="gigante">Ventajas</h1>
           <ul class="pie">
-            <li data-jmpress="warp-right after 1000ms step">control movimiento automático</li>
-            <li data-jmpress="warp-left after 3000ms step">+</li>
-            <li data-jmpress="warp-right after 2000ms step">programa de pieza</li>
-            <li data-jmpress="warp-left after 3000ms step">=</li>
-            <li data-jmpress="fade after 4000ms step">repetitividad, producción</li>
+            <li data-jmpress="warp-right after step">programa de pieza</li>
+            <li data-jmpress="warp-left after step">+</li>
+            <li data-jmpress="warp-right after step">control movimiento automático</li>
+            <li data-jmpress="warp-left after step">=</li>
+            <li data-jmpress="fade after step">repetitividad, producción</li>
           </ul>
+        </section>
+        <section>
+          <h1 class="gigante-2">¿Características constructivas?</h1>
         </section>
       </section>
 
@@ -154,7 +156,7 @@
             <section class="center-image">
               <img src="./images/componentes/83558376-min.png"></img>
             </section>
-            <section>
+            <!-- <section>
               <h1 class="gigante-2">Fagor 8035</h1>
               <ul class="pie">
                 <li>Control analógico de 3 ejes</li>
@@ -164,7 +166,7 @@
                 <li>Programación códigos G</li>
                 <li>Ciclos enlatados</li>
               </ul>
-            </section>
+            </section> -->
             <section class="center-image">
               <h1 class="gigante-3">Drivers y servos Estun</h1>
               <div class="estun">
@@ -182,7 +184,7 @@
           <!-- esquemas -->
           <section data-template="vertical">
             <h1 class="gigante-2">Circuito eléctrico</h1>
-            <ul class="pie">
+            <!-- <ul class="pie">
               <li data-jmpress="drive-up after 500ms step"
                   >alimentación DC y AC trifásica</li>
               <li data-jmpress="drive-up after 500ms prev"
@@ -193,14 +195,14 @@
                   >protecciones</li>
               <li data-jmpress="drive-up after 500ms prev"
                   >conexión de actuadores y sensores</li>
-            </ul>
+            </ul> -->
             <section>
               <h1>
                 Arranque inicial de controladora
               </h1>
               <div class="medium">
                 <img class="center"
-                     data-jmpress="fade after 500ms step"
+                     data-jmpress="fade"
                      src="./images/electrico/01.jpg"></img>
                 <img class="center"
                      data-jmpress="fade after 2000ms prev"
@@ -219,7 +221,7 @@
               <section data-exclude="true">
                 <img src="./images/electrico/esquema/02.png"></img>
               </section>
-              <section data-exclude="true">
+              <section data-exclude="false">
                 <img src="./images/electrico/esquema/03.png"></img>
               </section>
               <section data-exclude="true">
