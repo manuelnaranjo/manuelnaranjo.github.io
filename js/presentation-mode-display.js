@@ -2,7 +2,8 @@ $(function(){
   var notesUrl = false;
   var PREFIX = "jmpress-presentation-";
 
-  $(window).on('message', function(event){
+
+  window.addEventListener('message', function(event){
     if(typeof event.data !== "string" || event.data.indexOf(PREFIX) !== 0) {
       return;
     }
